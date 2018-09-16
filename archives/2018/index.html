@@ -394,7 +394,7 @@
     window.slideConfig = {
       prefix: '/imgs/slide/background',
       ext: 'jpg',
-      maxCount: '15'
+      maxCount: '12'
     }
 </script>
 <script src="/js/hs.js"></script>
@@ -403,5 +403,27 @@
 <script src="/js/oni.js"></script>
 
 
+
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = ''
+      window.commentConfig.owner = 'GreenTo'
+      window.commentConfig.repo = 'comment'
+      window.commentConfig.client_id = 'e6f1425a12f4a46b1fec'
+      window.commentConfig.client_secret = 'dcb6c681614fc773d1d38b6e70cf08f505516dbe'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: '',
+        owner: 'GreenTo',
+        repo: 'comment',
+        client_id: 'e6f1425a12f4a46b1fec',
+        client_secret: 'dcb6c681614fc773d1d38b6e70cf08f505516dbe',
+        redirect_uri: ''
+      }
+    }
+</script>
+<script src="/js/comment/gitment.js"></script>
 
 </html>
