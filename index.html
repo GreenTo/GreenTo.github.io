@@ -33,6 +33,14 @@
         }
     </style>
     
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: '1KJ8m2Ytm6NgrigKQtXxso5B-gzGzoHsz',
+        appKey: 'tqO3L64DbTnCrYpxTnyBkJrA'
+      })
+    </script>
+    
     <!--<script type="text/javascript">
       if (document.images) {
         var avatar = new Image();
@@ -221,6 +229,10 @@
             </span>
             
             
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
             <!-- TODO 添加评论统计 -->
             <!--<span class="label label-gal">
                 <i class="fa fa-comments"></i>
@@ -232,7 +244,7 @@
                 <a href="/2018/09/16/hello-world/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview6.jpg" alt="欢迎来到我的博客">
+                        <img src="/imgs/preview/preview2.jpg" alt="欢迎来到我的博客">
                     </div>
                     <div class="info">
                         
@@ -265,13 +277,15 @@
             
             
             
+            <i class="fa fa-eye"></i>
+            
         </center>
         <p></p>
         <div class="alert alert-gal article-body content-article">
             <p style="text-align: center;">
                 <a href="/2018/09/16/hello-world/">
                     
-                    <img src="/imgs/preview/preview1.jpg" alt="欢迎来到我的博客">
+                    <img src="/imgs/preview/preview2.jpg" alt="欢迎来到我的博客">
                 </a>
             </p>
         </div>
@@ -352,6 +366,18 @@
     
     <!-- 要配置好leancloud才能开启此小工具 -->
     
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
     
     <aside id="sidebar-recent_posts">
     <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
@@ -412,7 +438,7 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/blog/" style="font-size: 16.90721830274399px;" class="tag-cloud-link">blog</a>
+    <a href="/tags/blog/" style="font-size: 12.672396460385633px;" class="tag-cloud-link">blog</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -522,6 +548,12 @@
 
 <script src="/js/oni.js"></script>
 
+
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+<script src="/js/comment/leancloud.js"></script>
 
 
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
