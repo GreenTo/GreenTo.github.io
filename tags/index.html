@@ -12,7 +12,7 @@
     
     
     
-    <title>tags | 轩动心弦</title>
+    <title>标签 | 轩动心弦</title>
     <link href=”https://greento.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -124,20 +124,44 @@
                 
                 
                 
-                <li class="">
-                    <a href="/categories">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-list"></i>分类
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/blog/">blog</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
                 </li>
                 
                 
                 
                 
                 
-                <li class="current">
-                    <a href="/tags">
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
                         <i class="fa fa-tags"></i>标签
                     </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/spring/">spring</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
                 </li>
                 
                 
@@ -166,7 +190,7 @@
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/index.html">tags</a>
+                <a href="/tags/index.html">标签</a>
             </h1>
         </div>
         <div class="tag-article">
@@ -180,7 +204,7 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/index.html">tags</a>
+                    <a href="/tags/index.html">标签</a>
                 </h4>
             </div>
             <p>
@@ -199,7 +223,7 @@
 <script>
 	if(!window.commentConfig) {
       window.commentConfig = {}
-      window.commentConfig.title = 'tags'
+      window.commentConfig.title = '标签'
     }
 </script>
 
@@ -308,6 +332,8 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
+    <a href="/tags/spring/" style="font-size: 9.553771757504565px;" class="tag-cloud-link">spring</a>
+    
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
     
@@ -357,6 +383,12 @@
 <div id="gal-gotop">
     <i class="fa fa-angle-up"></i>
 </div>
+
+<span id="busuanzi_container_site_uv"> 
+    本站访客数<span id="busuanzi_value_site_pv"></span>人次
+</span>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 <script src="/js/activate-power-mode.js"></script>
 <script>
