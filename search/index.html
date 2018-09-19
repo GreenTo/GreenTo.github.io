@@ -220,7 +220,7 @@
     // 获取当前页数
     var p = query.length > 1 ? query[1].split('=')[1] : 1
     // 获取每页的页码数
-    var pageSize = '10'
+    var pageSize = '6'
     var useLeancloud = 'tqO3L64DbTnCrYpxTnyBkJrA'
     $.getJSON('/content.json', function (json) {
       $('#search-breadcrumb').append(`搜索'${s}'的结果`)
@@ -484,7 +484,7 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/blog/" style="font-size: 10.71131909560198px;" class="tag-cloud-link">blog</a>
+    <a href="/tags/blog/" style="font-size: 11.853120220267744px;" class="tag-cloud-link">blog</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -584,9 +584,9 @@
 </script>
 <script>
     window.slideConfig = {
-      prefix: 'http://pfa7lx4g5.bkt.clouddn.com/background',
+      prefix: '/imgs/background',
       ext: 'jpg',
-      maxCount: '8'
+      maxCount: '5'
     }
 </script>
 <script src="/js/hs.js"></script>
@@ -596,7 +596,7 @@
 
 
 <script>
-    window.hot_posts_count = '10'
+    window.hot_posts_count = '6'
     // window.use_leancloud = 'true'
 </script>
 <script src="/js/comment/leancloud.js"></script>
