@@ -12,7 +12,7 @@
     
     
     
-    <title>tags: 算法 | 轩动心弦</title>
+    <title>javaweb:浏览器请求到服务器端响应的简单过程 | 轩动心弦</title>
     <link href=”https://greento.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -214,19 +214,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-tag">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://greento.github.io">轩动心弦</a>
         >
-        <span>标签</span>
+        <span>javaweb:浏览器请求到服务器端响应的简单过程</span>
     </div>
+
+    <span id="busuanzi_container_page_pv" style="color:rgb(255, 23, 197);font-weight: bold">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>人次
+    </span>
+
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/tags/算法/index.html">算法</a>
+                <a href="/2018/09/20/article7/">javaweb:浏览器请求到服务器端响应的简单过程</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/tomcat/">tomcat</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-09-20
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -234,24 +258,59 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/tags/算法/index.html">算法</a>
+                    <a href="/2018/09/20/article7/">javaweb:浏览器请求到服务器端响应的简单过程</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-09-20
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/tomcat/">tomcat</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2018/09/20/article3/">快速排序法</a>
-            <br>
-            
-            <a href="/2018/09/20/article2/">二分查找法</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <blockquote>
+<p>学习javaweb的同学应该都有过一个混乱的时期,那时还弄不明白到底请求到响应的过程是如何进行的?web服务器是干什么的?Servlet归什么管?Servlet本质上不就是一个普通的java类吗,没有main方法是如何工作的?(文章中请求一律指HTTP请求,Servlet指HttpServlet)<br>那么接下来就开始讲解了,这是我的一些个人认知,有不准确的请多多纠正.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>要先了解整个过程,需要先明白大概.<br><img src="http://pfa7lx4g5.bkt.clouddn.com/Fph3kPXmK-VzIhUMkka_TEzs1s2E" alt=""><br>1.首先,浏览器发送http请求<br>2.若该请求是请求静态资源(html,css等),则web server能自行处理,返回静态资源.<br>3.若该请求是请求动态资源(jsp等),则Web Server就会交由Application Server处理,处理的结果再传给Web Server返回浏览器.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>那么,你可能会问,什么是Web Server?什么是Application Server?简单来说,Web Server是可以向浏览器提供静态资源的程序,当然了,它还能将请求转发给Application Server处理.<br>Application Server能提供动态资源,同时也具备了Web Server处理请求的能力(但没有那么专业).<br>对了,Tomcat就是一种Application Server.<br>顺便一提,企业级开发中,Web Server是和Application Server共同协作,分工明确的,一个提供静态资源,一个提供动态资源,这样能很好地提高处理请求的效率.<br><img src="http://pfa7lx4g5.bkt.clouddn.com/FhPJ9mpuJm6j-9p--oicxCub4g_B" alt=""></p>
+<blockquote>
+<p>额,那么Servlet又是如何工作的呢?其实,Servlet是归Web容器管理的,Web容器管理着Servlet的整个生命周期,向Servlet提供请求和响应,调用Servlet的方法,所以Servlet类无需main方法.而Web容器是在Application Server上的.Web容器可能有点理解,其实你也可以将Tomcat当成一个Web容器.</p>
+</blockquote>
+</blockquote>
+<hr>
+<blockquote>
+<p>既然Servlet是归容器管理的,那么容器又是如何处理请求的呢?<br><img src="http://pfa7lx4g5.bkt.clouddn.com/FhPJ9mpuJm6j-9p--oicxCub4g_B" alt=""><br>        1.当浏览器发送请求,容器会根据URL找到该项目,然后从该项目读取我们编写 Servlet 中的 @WebServlet 标注或者 web.xml 配置，找到能处理该请求的 Servlet.<br>        2.若该Servlet是第一次被访问,则创建Servlet对象servlet,调用servlet的init()方法从配置文件中获取自己的初始化参数,否则直接创建HttpServletRequest和HttpServletResponse的对象request和response.<br>        2.容器为该servlet创建一条线程,然后将request和response对象传给这条线程.<br>        3.容器调用servlet的service()方法,根据请求的不同调用doGet()或doPost()方法.(假设请求方法是get)<br>        4.doGet()方法生成动态页面(其实这是JSP做的),并将结果”放入”response方法.<br>        5.线程结束,容器把response转换成一个HTTP响应,把它传给浏览器,然后删除request和response,线程被销毁.</p>
+</blockquote>
+<pre><code>以上就是浏览器发起请求到服务端响应的一个简单过程,可能会有一些错误,希望你能提醒小编纠正,谢谢^_^
+</code></pre>
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'javaweb:浏览器请求到服务器端响应的简单过程'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -428,27 +487,27 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/tags/算法/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/09/20/article7/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/tags/算法/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/09/20/article7/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/tags/算法/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/09/20/article7/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/算法/" style="font-size: 17.144252379709535px;" class="tag-cloud-link">算法</a>
+    <a href="/tags/算法/" style="font-size: 8.066348494768437px;" class="tag-cloud-link">算法</a>
     
-    <a href="/tags/eclipse/" style="font-size: 11.567653399727227px;" class="tag-cloud-link">eclipse</a>
+    <a href="/tags/eclipse/" style="font-size: 19.83335238537952px;" class="tag-cloud-link">eclipse</a>
     
-    <a href="/tags/tomcat/" style="font-size: 19.839275694646204px;" class="tag-cloud-link">tomcat</a>
+    <a href="/tags/tomcat/" style="font-size: 9.753291875789092px;" class="tag-cloud-link">tomcat</a>
     
-    <a href="/tags/maven/" style="font-size: 17.419609195157705px;" class="tag-cloud-link">maven</a>
+    <a href="/tags/maven/" style="font-size: 13.998579998796519px;" class="tag-cloud-link">maven</a>
     
-    <a href="/tags/blog/" style="font-size: 10.240038077936784px;" class="tag-cloud-link">blog</a>
+    <a href="/tags/blog/" style="font-size: 17.836888569343067px;" class="tag-cloud-link">blog</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -569,7 +628,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = ''
+      window.commentConfig.id = 'Thu Sep 20 2018 22:37:40 GMT+0800'
       window.commentConfig.owner = 'GreenTo'
       window.commentConfig.repo = 'comment'
       window.commentConfig.client_id = 'e6f1425a12f4a46b1fec'
@@ -577,7 +636,7 @@
       window.commentConfig.redirect_uri = ''
     } else {
       window.commentConfig = {
-      	id: '',
+      	id: 'Thu Sep 20 2018 22:37:40 GMT+0800',
         owner: 'GreenTo',
         repo: 'comment',
         client_id: 'e6f1425a12f4a46b1fec',
