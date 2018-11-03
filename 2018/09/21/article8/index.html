@@ -45,7 +45,7 @@
       if (document.images) {
         var avatar = new Image();
         avatar.src = '/imgs/head.jpg'
-        var previews = 'http://pfa7lx4g5.bkt.clouddn.com/preview/preview1.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview2.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview3.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview4.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview5.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview6.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview7.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview8.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview9.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview10.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview11.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview12.jpg'.split(',')
+        var previews = 'http://www.greento.club/preview/preview1.jpg,http://www.greento.club/preview/preview2.jpg,http://www.greento.club/preview/preview3.jpg,http://www.greento.club/preview/preview4.jpg,http://www.greento.club/preview/preview5.jpg,http://www.greento.club/preview/preview6.jpg,http://www.greento.club/preview/preview7.jpg,http://www.greento.club/preview/preview8.jpg,http://www.greento.club/preview/preview9.jpg,http://www.greento.club/preview/preview10.jpg,http://www.greento.club/preview/preview11.jpg,http://www.greento.club/preview/preview12.jpg'.split(',')
         var previewsPreLoad = []
         for(var i = 0; i < length; i++) {
           previewsPreLoad.push(new Image())
@@ -150,11 +150,11 @@
                         </li>
                         
                         <li>
-                            <a href="/categories/杂谈/">杂谈</a>
+                            <a href="/categories/javaweb/">javaweb</a>
                         </li>
                         
                         <li>
-                            <a href="/categories/javaweb/">javaweb</a>
+                            <a href="/categories/杂谈/">杂谈</a>
                         </li>
                         
                         
@@ -176,6 +176,14 @@
                         
                         
                         <li>
+                            <a href="/tags/数据结构/">数据结构</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/maven/">maven</a>
+                        </li>
+                        
+                        <li>
                             <a href="/tags/算法/">算法</a>
                         </li>
                         
@@ -184,19 +192,11 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/maven/">maven</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/数据结构/">数据结构</a>
+                            <a href="/tags/tomcat/">tomcat</a>
                         </li>
                         
                         <li>
                             <a href="/tags/blog/">blog</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/tomcat/">tomcat</a>
                         </li>
                         
                         
@@ -289,7 +289,7 @@
         <blockquote>
 <p>前言:<br>今天数据结构学了顺序表,所以弄一个简单的顺序表出来.<br><strong>顺序表</strong>是在计算机内存中以数组的形式保存的线性表，线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的各个元素、使得线性表中在逻辑结构上相邻的数据元素存储在相邻的物理存储单元中，即通过数据元素物理存储的相邻关系来反映数据元素之间逻辑上的相邻关系，采用顺序存储结构的线性表通常称为顺序表。<strong>顺序表</strong>是将表中的结点依次存放在计算机内存中一组地址连续的存储单元中.<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_LENGTH 10</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType *elem;</span><br><span class="line">	<span class="keyword">int</span> length;</span><br><span class="line">	<span class="keyword">int</span> listsize;</span><br><span class="line">&#125;SeqList;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">initList</span><span class="params">(SeqList *L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	L-&gt;elem = (ElemType*)<span class="built_in">malloc</span>(MAX_LENGTH * <span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">	<span class="comment">//若内存空间分配失败,elem=null</span></span><br><span class="line">	<span class="keyword">if</span>(!L-&gt;elem)	</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	L-&gt;listsize = MAX_LENGTH;</span><br><span class="line">	L-&gt;length = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">insertElem</span><span class="params">(SeqList *L,<span class="keyword">int</span> i,ElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(i &lt; <span class="number">1</span> || i &gt; L-&gt;length+<span class="number">1</span> || L-&gt;length == L-&gt;listsize)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(j = L-&gt;length<span class="number">-1</span>;j &gt;= i<span class="number">-1</span>;j--) &#123;</span><br><span class="line">		L-&gt;elem[j+<span class="number">1</span>] = L-&gt;elem[j];</span><br><span class="line">	&#125;</span><br><span class="line">	L-&gt;elem[i<span class="number">-1</span>] = e;</span><br><span class="line">	L-&gt;length++;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findElem</span><span class="params">(SeqList List,ElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; List.length;i++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(e == List.elem[i])</span><br><span class="line">			<span class="keyword">return</span> i+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteElem</span><span class="params">(SeqList *L,<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">if</span>(i &lt; <span class="number">1</span> || i &gt; L-&gt;length)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(j = i;j &lt; L-&gt;length;j++) &#123;</span><br><span class="line">		L-&gt;elem[j<span class="number">-1</span>] = L-&gt;elem[j];</span><br><span class="line">	&#125;</span><br><span class="line">	L-&gt;length--;</span><br><span class="line">	<span class="comment">//无法单独释放该元素,只能末位赋0.或者创建一个新数组.</span></span><br><span class="line">	L-&gt;elem[j] = <span class="number">0</span>;		</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printElem</span><span class="params">(SeqList List)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; List.length;i++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,List.elem[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b,i;</span><br><span class="line">	SeqList List;</span><br><span class="line">	SeqList *L;</span><br><span class="line">	L = &amp;List;</span><br><span class="line">	initList(L);</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">5</span>;i++) &#123;</span><br><span class="line">		L-&gt;elem[i] = i;</span><br><span class="line">		L-&gt;length++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//printf("%d",b); 测试是否插入成功</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n--------------\n添加前:"</span>);</span><br><span class="line">	printElem(List);</span><br><span class="line">	b = findElem(List,<span class="number">3</span>);	<span class="comment">//查找3</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n3在第%d个位置\n"</span>,b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n--------------\n添加后:"</span>);</span><br><span class="line">	b = insertElem(L,<span class="number">3</span>,<span class="number">5</span>);	<span class="comment">//在第三个位置插入5</span></span><br><span class="line">	printElem(List);</span><br><span class="line">	b = deleteElem(L,<span class="number">3</span>);	<span class="comment">//删除第三个数</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n--------------\n删除后:"</span>);</span><br><span class="line">	printElem(List);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p><img src="http://pfa7lx4g5.bkt.clouddn.com/FhGvBkA7YEyIpsrxvG9Zq4ZpFVNj" alt=""></p>
+<p><img src="http://www.greento.club/FhGvBkA7YEyIpsrxvG9Zq4ZpFVNj" alt=""></p>
 
     </div>
 </article>
@@ -373,7 +373,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/21/article9/">单链表的c语言的实现</a>
+                    <a href="/2018/10/12/article10/">顺序栈的c语言实现</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/21/article9/">单链表的c语言实现</a>
                 </span>
             </li>
             
@@ -443,19 +449,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/20/article3/">快速排序法</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article6/">MyEclipse 2017 配置Tomcat步骤</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article2/">二分查找法</a>
+                    <a href="/2018/10/12/article10/">顺序栈的c语言实现</a>
                 </span>
             </li>
             
@@ -467,7 +461,37 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/21/article9/">单链表的c语言的实现</a>
+                    <a href="/2018/09/20/article2/">二分查找法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article5/">MyEclipse 2017版本 配置工作空间的步骤</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article6/">MyEclipse 2017 配置Tomcat步骤</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article3/">快速排序法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/21/article9/">单链表的c语言实现</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article7/">javaweb:浏览器请求到服务器端响应的简单过程</a>
                 </span>
             </li>
             
@@ -480,18 +504,6 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/09/21/article8/">顺序表的c语言实现</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article5/">MyEclipse 2017版本 配置工作空间的步骤</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article7/">javaweb:浏览器请求到服务器端响应的简单过程</a>
                 </span>
             </li>
             
@@ -516,17 +528,17 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/算法/" style="font-size: 12.348421205643175px;" class="tag-cloud-link">算法</a>
+    <a href="/tags/数据结构/" style="font-size: 11.028027151972358px;" class="tag-cloud-link">数据结构</a>
     
-    <a href="/tags/eclipse/" style="font-size: 17.64843762837364px;" class="tag-cloud-link">eclipse</a>
+    <a href="/tags/maven/" style="font-size: 11.876471711977416px;" class="tag-cloud-link">maven</a>
     
-    <a href="/tags/maven/" style="font-size: 14.45331628338774px;" class="tag-cloud-link">maven</a>
+    <a href="/tags/算法/" style="font-size: 9.421814440881555px;" class="tag-cloud-link">算法</a>
     
-    <a href="/tags/数据结构/" style="font-size: 10.209854752336469px;" class="tag-cloud-link">数据结构</a>
+    <a href="/tags/eclipse/" style="font-size: 15.372498039031166px;" class="tag-cloud-link">eclipse</a>
     
-    <a href="/tags/blog/" style="font-size: 19.71852850795832px;" class="tag-cloud-link">blog</a>
+    <a href="/tags/tomcat/" style="font-size: 19.858145423735497px;" class="tag-cloud-link">tomcat</a>
     
-    <a href="/tags/tomcat/" style="font-size: 16.079125668596532px;" class="tag-cloud-link">tomcat</a>
+    <a href="/tags/blog/" style="font-size: 11.880195222086822px;" class="tag-cloud-link">blog</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -626,7 +638,7 @@
 </script>
 <script>
     window.slideConfig = {
-      prefix: 'http://pfa7lx4g5.bkt.clouddn.com/slide/background',
+      prefix: 'http://www.greento.club/slide/background',
       ext: 'jpg',
       maxCount: '6'
     }

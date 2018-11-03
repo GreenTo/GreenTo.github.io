@@ -12,7 +12,7 @@
     
     
     
-    <title>categories: 杂谈 | 轩动心弦</title>
+    <title>顺序栈的c语言实现 | 轩动心弦</title>
     <link href=”https://greento.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -222,19 +222,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-category">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="https://greento.github.io">轩动心弦</a>
         >
-        <span>目录</span>
+        <span>顺序栈的c语言实现</span>
     </div>
+
+    <span id="busuanzi_container_page_pv" style="color:rgb(255, 23, 197);font-weight: bold">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>人次
+    </span>
+
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/categories/杂谈/index.html">杂谈</a>
+                <a href="/2018/10/12/article10/">顺序栈的c语言实现</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/数据结构/">数据结构</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-12
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -242,21 +266,45 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/categories/杂谈/index.html">杂谈</a>
+                    <a href="/2018/10/12/article10/">顺序栈的c语言实现</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-12
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/数据结构/">数据结构</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2018/09/16/hello-world/">欢迎来到我的博客</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <blockquote>
+<p> 今天教了顺序栈的原理,在实验课弄了这个简单的顺序栈.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAXSIZE 100</span><br><span class="line"></span><br><span class="line">typedef int ElemType;</span><br><span class="line"></span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">	ElemType elem[MAXSIZE];</span><br><span class="line">	int top;</span><br><span class="line">&#125;Stack;</span><br><span class="line"></span><br><span class="line">void initStack(Stack *s)</span><br><span class="line">&#123;</span><br><span class="line">	s-&gt;top = 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int stackEmpty(Stack *s)</span><br><span class="line">&#123;</span><br><span class="line">	if(s-&gt;top == 0)&#123;</span><br><span class="line">		return 1;</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int push(Stack *s,ElemType e)</span><br><span class="line">&#123;</span><br><span class="line">	if(s-&gt;top == MAXSIZE)</span><br><span class="line">		return 0;</span><br><span class="line">	s-&gt;elem[s-&gt;top] = e;</span><br><span class="line">	s-&gt;top++;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void printElem(Stack *s)</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	printf(&quot;\n栈内元素:&quot;);</span><br><span class="line">	for(i = 0;i &lt; s-&gt;top;i++)&#123;</span><br><span class="line">		printf(&quot;%d\t&quot;,s-&gt;elem[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int pop(Stack *s,ElemType *e)</span><br><span class="line">&#123;</span><br><span class="line">	int b;</span><br><span class="line">	b = stackEmpty(s);</span><br><span class="line">	if(b == 1)</span><br><span class="line">		return 0;</span><br><span class="line">	*e = s-&gt;elem[--s-&gt;top];</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	int b,n;</span><br><span class="line">	Stack s;</span><br><span class="line">	initStack(&amp;s);</span><br><span class="line">	b = push(&amp;s,18);</span><br><span class="line">	printf(&quot;插栈是否成功:%d\n&quot;,b);</span><br><span class="line">	push(&amp;s,13);</span><br><span class="line">	push(&amp;s,22);</span><br><span class="line">	push(&amp;s,9);</span><br><span class="line">	printElem(&amp;s);</span><br><span class="line">	b = pop(&amp;s,&amp;n);</span><br><span class="line">	printf(&quot;\n栈顶元素:%d\n&quot;,n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://www.greento.club/FnlKI3azzLy40TyF90V8ctmee89r" alt=""></p>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = '顺序栈的c语言实现'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -469,29 +517,29 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/categories/杂谈/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/12/article10/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/categories/杂谈/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/12/article10/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/categories/杂谈/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/12/article10/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/数据结构/" style="font-size: 10.140189653805251px;" class="tag-cloud-link">数据结构</a>
+    <a href="/tags/数据结构/" style="font-size: 11.768240035675992px;" class="tag-cloud-link">数据结构</a>
     
-    <a href="/tags/maven/" style="font-size: 19.21210508570496px;" class="tag-cloud-link">maven</a>
+    <a href="/tags/maven/" style="font-size: 14.641328832353432px;" class="tag-cloud-link">maven</a>
     
-    <a href="/tags/算法/" style="font-size: 18.628229393418582px;" class="tag-cloud-link">算法</a>
+    <a href="/tags/算法/" style="font-size: 16.337614073683955px;" class="tag-cloud-link">算法</a>
     
-    <a href="/tags/eclipse/" style="font-size: 18.288660544194737px;" class="tag-cloud-link">eclipse</a>
+    <a href="/tags/eclipse/" style="font-size: 15.76778103808282px;" class="tag-cloud-link">eclipse</a>
     
-    <a href="/tags/tomcat/" style="font-size: 12.700385400465702px;" class="tag-cloud-link">tomcat</a>
+    <a href="/tags/tomcat/" style="font-size: 14.055617485572157px;" class="tag-cloud-link">tomcat</a>
     
-    <a href="/tags/blog/" style="font-size: 13.61006714376676px;" class="tag-cloud-link">blog</a>
+    <a href="/tags/blog/" style="font-size: 15.407090042069862px;" class="tag-cloud-link">blog</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -612,7 +660,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = ''
+      window.commentConfig.id = 'Fri Oct 12 2018 21:09:08 GMT+0800'
       window.commentConfig.owner = 'GreenTo'
       window.commentConfig.repo = 'comment'
       window.commentConfig.client_id = 'e6f1425a12f4a46b1fec'
@@ -620,7 +668,7 @@
       window.commentConfig.redirect_uri = ''
     } else {
       window.commentConfig = {
-      	id: '',
+      	id: 'Fri Oct 12 2018 21:09:08 GMT+0800',
         owner: 'GreenTo',
         repo: 'comment',
         client_id: 'e6f1425a12f4a46b1fec',

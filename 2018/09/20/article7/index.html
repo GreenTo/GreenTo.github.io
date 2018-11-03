@@ -45,7 +45,7 @@
       if (document.images) {
         var avatar = new Image();
         avatar.src = '/imgs/head.jpg'
-        var previews = 'http://pfa7lx4g5.bkt.clouddn.com/preview/preview1.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview2.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview3.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview4.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview5.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview6.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview7.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview8.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview9.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview10.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview11.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview12.jpg'.split(',')
+        var previews = 'http://www.greento.club/preview/preview1.jpg,http://www.greento.club/preview/preview2.jpg,http://www.greento.club/preview/preview3.jpg,http://www.greento.club/preview/preview4.jpg,http://www.greento.club/preview/preview5.jpg,http://www.greento.club/preview/preview6.jpg,http://www.greento.club/preview/preview7.jpg,http://www.greento.club/preview/preview8.jpg,http://www.greento.club/preview/preview9.jpg,http://www.greento.club/preview/preview10.jpg,http://www.greento.club/preview/preview11.jpg,http://www.greento.club/preview/preview12.jpg'.split(',')
         var previewsPreLoad = []
         for(var i = 0; i < length; i++) {
           previewsPreLoad.push(new Image())
@@ -150,11 +150,11 @@
                         </li>
                         
                         <li>
-                            <a href="/categories/杂谈/">杂谈</a>
+                            <a href="/categories/javaweb/">javaweb</a>
                         </li>
                         
                         <li>
-                            <a href="/categories/javaweb/">javaweb</a>
+                            <a href="/categories/杂谈/">杂谈</a>
                         </li>
                         
                         
@@ -176,6 +176,14 @@
                         
                         
                         <li>
+                            <a href="/tags/数据结构/">数据结构</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/maven/">maven</a>
+                        </li>
+                        
+                        <li>
                             <a href="/tags/算法/">算法</a>
                         </li>
                         
@@ -184,19 +192,11 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/maven/">maven</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/数据结构/">数据结构</a>
+                            <a href="/tags/tomcat/">tomcat</a>
                         </li>
                         
                         <li>
                             <a href="/tags/blog/">blog</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/tomcat/">tomcat</a>
                         </li>
                         
                         
@@ -291,18 +291,18 @@
 </blockquote>
 <hr>
 <blockquote>
-<p>要先了解整个过程,需要先明白大概.<br><img src="http://pfa7lx4g5.bkt.clouddn.com/Fph3kPXmK-VzIhUMkka_TEzs1s2E" alt=""><br>1.首先,浏览器发送http请求<br>2.若该请求是请求静态资源(html,css等),则web server能自行处理,返回静态资源.<br>3.若该请求是请求动态资源(jsp等),则Web Server就会交由Application Server处理,处理的结果再传给Web Server返回浏览器.</p>
+<p>要先了解整个过程,需要先明白大概.<br><img src="http://www.greento.club/Fph3kPXmK-VzIhUMkka_TEzs1s2E" alt=""><br>1.首先,浏览器发送http请求<br>2.若该请求是请求静态资源(html,css等),则web server能自行处理,返回静态资源.<br>3.若该请求是请求动态资源(jsp等),则Web Server就会交由Application Server处理,处理的结果再传给Web Server返回浏览器.</p>
 </blockquote>
 <hr>
 <blockquote>
-<p>那么,你可能会问,什么是Web Server?什么是Application Server?简单来说,Web Server是可以向浏览器提供静态资源的程序,当然了,它还能将请求转发给Application Server处理.<br>Application Server能提供动态资源,同时也具备了Web Server处理请求的能力(但没有那么专业).<br>对了,Tomcat就是一种Application Server.<br>顺便一提,企业级开发中,Web Server是和Application Server共同协作,分工明确的,一个提供静态资源,一个提供动态资源,这样能很好地提高处理请求的效率.<br><img src="http://pfa7lx4g5.bkt.clouddn.com/FhPJ9mpuJm6j-9p--oicxCub4g_B" alt=""></p>
+<p>那么,你可能会问,什么是Web Server?什么是Application Server?简单来说,Web Server是可以向浏览器提供静态资源的程序,当然了,它还能将请求转发给Application Server处理.<br>Application Server能提供动态资源,同时也具备了Web Server处理请求的能力(但没有那么专业).<br>对了,Tomcat就是一种Application Server.<br>顺便一提,企业级开发中,Web Server是和Application Server共同协作,分工明确的,一个提供静态资源,一个提供动态资源,这样能很好地提高处理请求的效率.<br><img src="http://www.greento.club/FhPJ9mpuJm6j-9p--oicxCub4g_B" alt=""></p>
 <blockquote>
 <p>额,那么Servlet又是如何工作的呢?其实,Servlet是归Web容器管理的,Web容器管理着Servlet的整个生命周期,向Servlet提供请求和响应,调用Servlet的方法,所以Servlet类无需main方法.而Web容器是在Application Server上的.Web容器可能有点理解,其实你也可以将Tomcat当成一个Web容器.</p>
 </blockquote>
 </blockquote>
 <hr>
 <blockquote>
-<p>既然Servlet是归容器管理的,那么容器又是如何处理请求的呢?<br><img src="http://pfa7lx4g5.bkt.clouddn.com/FhPJ9mpuJm6j-9p--oicxCub4g_B" alt=""><br>        1.当浏览器发送请求,容器会根据URL找到该项目,然后从该项目读取我们编写 Servlet 中的 @WebServlet 标注或者 web.xml 配置，找到能处理该请求的 Servlet.<br>        2.若该Servlet是第一次被访问,则创建Servlet对象servlet,调用servlet的init()方法从配置文件中获取自己的初始化参数,否则直接创建HttpServletRequest和HttpServletResponse的对象request和response.<br>        2.容器为该servlet创建一条线程,然后将request和response对象传给这条线程.<br>        3.容器调用servlet的service()方法,根据请求的不同调用doGet()或doPost()方法.(假设请求方法是get)<br>        4.doGet()方法生成动态页面(其实这是JSP做的),并将结果”放入”response方法.<br>        5.线程结束,容器把response转换成一个HTTP响应,把它传给浏览器,然后删除request和response,线程被销毁.</p>
+<p>既然Servlet是归容器管理的,那么容器又是如何处理请求的呢?<br><img src="http://www.greento.club/FhPJ9mpuJm6j-9p--oicxCub4g_B" alt=""><br>        1.当浏览器发送请求,容器会根据URL找到该项目,然后从该项目读取我们编写 Servlet 中的 @WebServlet 标注或者 web.xml 配置，找到能处理该请求的 Servlet.<br>        2.若该Servlet是第一次被访问,则创建Servlet对象servlet,调用servlet的init()方法从配置文件中获取自己的初始化参数,否则直接创建HttpServletRequest和HttpServletResponse的对象request和response.<br>        2.容器为该servlet创建一条线程,然后将request和response对象传给这条线程.<br>        3.容器调用servlet的service()方法,根据请求的不同调用doGet()或doPost()方法.(假设请求方法是get)<br>        4.doGet()方法生成动态页面(其实这是JSP做的),并将结果”放入”response方法.<br>        5.线程结束,容器把response转换成一个HTTP响应,把它传给浏览器,然后删除request和response,线程被销毁.</p>
 </blockquote>
 <pre><code>以上就是浏览器发起请求到服务端响应的一个简单过程,可能会有一些错误,希望你能提醒小编纠正,谢谢^_^
 </code></pre>
@@ -388,7 +388,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/21/article9/">单链表的c语言的实现</a>
+                    <a href="/2018/10/12/article10/">顺序栈的c语言实现</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/21/article9/">单链表的c语言实现</a>
                 </span>
             </li>
             
@@ -458,19 +464,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/20/article3/">快速排序法</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article6/">MyEclipse 2017 配置Tomcat步骤</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article2/">二分查找法</a>
+                    <a href="/2018/10/12/article10/">顺序栈的c语言实现</a>
                 </span>
             </li>
             
@@ -482,7 +476,37 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/21/article9/">单链表的c语言的实现</a>
+                    <a href="/2018/09/20/article2/">二分查找法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article5/">MyEclipse 2017版本 配置工作空间的步骤</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article6/">MyEclipse 2017 配置Tomcat步骤</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article3/">快速排序法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/21/article9/">单链表的c语言实现</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article7/">javaweb:浏览器请求到服务器端响应的简单过程</a>
                 </span>
             </li>
             
@@ -495,18 +519,6 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/09/21/article8/">顺序表的c语言实现</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article5/">MyEclipse 2017版本 配置工作空间的步骤</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article7/">javaweb:浏览器请求到服务器端响应的简单过程</a>
                 </span>
             </li>
             
@@ -531,17 +543,17 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/算法/" style="font-size: 16.827102798891413px;" class="tag-cloud-link">算法</a>
+    <a href="/tags/数据结构/" style="font-size: 17.731472133687276px;" class="tag-cloud-link">数据结构</a>
     
-    <a href="/tags/eclipse/" style="font-size: 16.15710352916276px;" class="tag-cloud-link">eclipse</a>
+    <a href="/tags/maven/" style="font-size: 17.536988410507753px;" class="tag-cloud-link">maven</a>
     
-    <a href="/tags/maven/" style="font-size: 12.072903808614228px;" class="tag-cloud-link">maven</a>
+    <a href="/tags/算法/" style="font-size: 8.754725075680243px;" class="tag-cloud-link">算法</a>
     
-    <a href="/tags/数据结构/" style="font-size: 16.380575714827554px;" class="tag-cloud-link">数据结构</a>
+    <a href="/tags/eclipse/" style="font-size: 12.971068825968448px;" class="tag-cloud-link">eclipse</a>
     
-    <a href="/tags/blog/" style="font-size: 9.030459995214459px;" class="tag-cloud-link">blog</a>
+    <a href="/tags/tomcat/" style="font-size: 11.318207902407279px;" class="tag-cloud-link">tomcat</a>
     
-    <a href="/tags/tomcat/" style="font-size: 18.203216921923385px;" class="tag-cloud-link">tomcat</a>
+    <a href="/tags/blog/" style="font-size: 11.309143043732742px;" class="tag-cloud-link">blog</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -641,7 +653,7 @@
 </script>
 <script>
     window.slideConfig = {
-      prefix: 'http://pfa7lx4g5.bkt.clouddn.com/slide/background',
+      prefix: 'http://www.greento.club/slide/background',
       ext: 'jpg',
       maxCount: '6'
     }

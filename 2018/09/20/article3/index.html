@@ -45,7 +45,7 @@
       if (document.images) {
         var avatar = new Image();
         avatar.src = '/imgs/head.jpg'
-        var previews = 'http://pfa7lx4g5.bkt.clouddn.com/preview/preview1.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview2.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview3.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview4.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview5.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview6.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview7.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview8.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview9.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview10.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview11.jpg,http://pfa7lx4g5.bkt.clouddn.com/preview/preview12.jpg'.split(',')
+        var previews = 'http://www.greento.club/preview/preview1.jpg,http://www.greento.club/preview/preview2.jpg,http://www.greento.club/preview/preview3.jpg,http://www.greento.club/preview/preview4.jpg,http://www.greento.club/preview/preview5.jpg,http://www.greento.club/preview/preview6.jpg,http://www.greento.club/preview/preview7.jpg,http://www.greento.club/preview/preview8.jpg,http://www.greento.club/preview/preview9.jpg,http://www.greento.club/preview/preview10.jpg,http://www.greento.club/preview/preview11.jpg,http://www.greento.club/preview/preview12.jpg'.split(',')
         var previewsPreLoad = []
         for(var i = 0; i < length; i++) {
           previewsPreLoad.push(new Image())
@@ -150,11 +150,11 @@
                         </li>
                         
                         <li>
-                            <a href="/categories/杂谈/">杂谈</a>
+                            <a href="/categories/javaweb/">javaweb</a>
                         </li>
                         
                         <li>
-                            <a href="/categories/javaweb/">javaweb</a>
+                            <a href="/categories/杂谈/">杂谈</a>
                         </li>
                         
                         
@@ -176,6 +176,14 @@
                         
                         
                         <li>
+                            <a href="/tags/数据结构/">数据结构</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/maven/">maven</a>
+                        </li>
+                        
+                        <li>
                             <a href="/tags/算法/">算法</a>
                         </li>
                         
@@ -184,19 +192,11 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/maven/">maven</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/数据结构/">数据结构</a>
+                            <a href="/tags/tomcat/">tomcat</a>
                         </li>
                         
                         <li>
                             <a href="/tags/blog/">blog</a>
-                        </li>
-                        
-                        <li>
-                            <a href="/tags/tomcat/">tomcat</a>
                         </li>
                         
                         
@@ -292,12 +292,12 @@
 <p>取数组的第一个位置作为基准值,小于基准值的放数组左边,大于基准值的放数组右边,递归数组两边的排序.</p>
 </blockquote>
 </blockquote>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现:"></a>代码实现:</h2><h3 id="第一代版本"><a href="#第一代版本" class="headerlink" title="第一代版本:"></a>第一代版本:</h3><p><img src="http://pfa7lx4g5.bkt.clouddn.com/FsRtsWFg_FHSgSdYR8q0kmLZ4TYu" alt=""><br><img src="http://pfa7lx4g5.bkt.clouddn.com/FsTSslLpCHoMN1Rgw_9fVHeMxW3r" alt=""><br>        运行结果:<br><img src="http://pfa7lx4g5.bkt.clouddn.com/FnBfz4OvNYU_Znu7wYceLTfjaavj" alt=""></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现:"></a>代码实现:</h2><h3 id="第一代版本"><a href="#第一代版本" class="headerlink" title="第一代版本:"></a>第一代版本:</h3><p><img src="http://www.greento.club/FsRtsWFg_FHSgSdYR8q0kmLZ4TYu" alt=""><br><img src="http://www.greento.club/FsTSslLpCHoMN1Rgw_9fVHeMxW3r" alt=""><br>        运行结果:<br><img src="http://www.greento.club/FnBfz4OvNYU_Znu7wYceLTfjaavj" alt=""></p>
 <blockquote>
 <p>缺点:该版本只能对存储不重复数的数组进行排序,若数组含有重复数,改程序将死循环.</p>
 </blockquote>
 <h4 id="源码"><a href="#源码" class="headerlink" title="源码:"></a>源码:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">public class QuickSort &#123;</span><br><span class="line"></span><br><span class="line">	public static void quickSort(int[] arr,int low,int high) &#123;</span><br><span class="line">		int i = low;</span><br><span class="line">		int j = high;</span><br><span class="line">		if(low &gt;= high) &#123;</span><br><span class="line">			return;</span><br><span class="line">		&#125;</span><br><span class="line">		int key = i;</span><br><span class="line">		while(low &lt; high) &#123;</span><br><span class="line">			while(low &lt; high &amp;&amp; arr[high] &gt; arr[key]) &#123;</span><br><span class="line">				high--;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			while(low &lt; high &amp;&amp; arr[low] &lt; arr[key]) &#123;</span><br><span class="line">				low++;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			if(low &lt; high) &#123;</span><br><span class="line">				int temp = arr[high];</span><br><span class="line">				arr[high] = arr[low];</span><br><span class="line">				arr[low] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		if(low &lt; high) &#123;</span><br><span class="line">			int temp = arr[key];</span><br><span class="line">			arr[key] = arr[low];</span><br><span class="line">			arr[low] = temp;</span><br><span class="line">		&#125;</span><br><span class="line">		quickSort(arr, key+1, j);</span><br><span class="line">		quickSort(arr, i, key-1);</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int arr[] = &#123;1,3,2,5,66,33,22,0,55,8&#125;;</span><br><span class="line">		QuickSort.quickSort(arr, 0, arr.length-1);</span><br><span class="line">		System.out.println(Arrays.toString(arr));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="第二代版本"><a href="#第二代版本" class="headerlink" title="第二代版本:"></a>第二代版本:</h3><p><img src="http://pfa7lx4g5.bkt.clouddn.com/FrfFsh8JvkguDAcBGFG8CufW5EJa" alt=""><br><img src="http://pfa7lx4g5.bkt.clouddn.com/FgYwjB5_jwF2O3CFXGw62rEgdg_Y" alt=""><br> 运行结果:<br><img src="http://pfa7lx4g5.bkt.clouddn.com/Fqtlas_pakqW75Isq58R-Yndeb_6" alt=""></p>
+<h3 id="第二代版本"><a href="#第二代版本" class="headerlink" title="第二代版本:"></a>第二代版本:</h3><p><img src="http://www.greento.club/FrfFsh8JvkguDAcBGFG8CufW5EJa" alt=""><br><img src="http://www.greento.club/FgYwjB5_jwF2O3CFXGw62rEgdg_Y" alt=""><br> 运行结果:<br><img src="http://www.greento.club/Fqtlas_pakqW75Isq58R-Yndeb_6" alt=""></p>
 <blockquote>
 <p>该程序好处是不会漏掉任何一个数，坏处是交换次数较多，效率较低</p>
 </blockquote>
@@ -385,7 +385,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/21/article9/">单链表的c语言的实现</a>
+                    <a href="/2018/10/12/article10/">顺序栈的c语言实现</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/21/article9/">单链表的c语言实现</a>
                 </span>
             </li>
             
@@ -455,19 +461,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/20/article3/">快速排序法</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article6/">MyEclipse 2017 配置Tomcat步骤</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article2/">二分查找法</a>
+                    <a href="/2018/10/12/article10/">顺序栈的c语言实现</a>
                 </span>
             </li>
             
@@ -479,7 +473,37 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/21/article9/">单链表的c语言的实现</a>
+                    <a href="/2018/09/20/article2/">二分查找法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article5/">MyEclipse 2017版本 配置工作空间的步骤</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article6/">MyEclipse 2017 配置Tomcat步骤</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article3/">快速排序法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/21/article9/">单链表的c语言实现</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/20/article7/">javaweb:浏览器请求到服务器端响应的简单过程</a>
                 </span>
             </li>
             
@@ -492,18 +516,6 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/09/21/article8/">顺序表的c语言实现</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article5/">MyEclipse 2017版本 配置工作空间的步骤</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/20/article7/">javaweb:浏览器请求到服务器端响应的简单过程</a>
                 </span>
             </li>
             
@@ -528,17 +540,17 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/算法/" style="font-size: 14.87315364231068px;" class="tag-cloud-link">算法</a>
+    <a href="/tags/数据结构/" style="font-size: 10.32696700339544px;" class="tag-cloud-link">数据结构</a>
     
-    <a href="/tags/eclipse/" style="font-size: 9.165402238161745px;" class="tag-cloud-link">eclipse</a>
+    <a href="/tags/maven/" style="font-size: 19.764725407206107px;" class="tag-cloud-link">maven</a>
     
-    <a href="/tags/maven/" style="font-size: 8.953276650182397px;" class="tag-cloud-link">maven</a>
+    <a href="/tags/算法/" style="font-size: 11.68048219031817px;" class="tag-cloud-link">算法</a>
     
-    <a href="/tags/数据结构/" style="font-size: 18.02617866717136px;" class="tag-cloud-link">数据结构</a>
+    <a href="/tags/eclipse/" style="font-size: 12.499833988846765px;" class="tag-cloud-link">eclipse</a>
     
-    <a href="/tags/blog/" style="font-size: 9.481973204611208px;" class="tag-cloud-link">blog</a>
+    <a href="/tags/tomcat/" style="font-size: 13.663942559354126px;" class="tag-cloud-link">tomcat</a>
     
-    <a href="/tags/tomcat/" style="font-size: 9.649082033365215px;" class="tag-cloud-link">tomcat</a>
+    <a href="/tags/blog/" style="font-size: 18.05178247185406px;" class="tag-cloud-link">blog</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -638,7 +650,7 @@
 </script>
 <script>
     window.slideConfig = {
-      prefix: 'http://pfa7lx4g5.bkt.clouddn.com/slide/background',
+      prefix: 'http://www.greento.club/slide/background',
       ext: 'jpg',
       maxCount: '6'
     }
